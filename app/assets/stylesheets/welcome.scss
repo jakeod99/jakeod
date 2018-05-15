@@ -1,3 +1,48 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Yellowtail);
+
+.horizontal-bar {
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.horizontal-bar,
+.round-corners {
+  border-radius: 10px;
+}
+
+.bar-option {
+  font-size: 40px;
+  font-family: 'Georgia';
+  padding: 10px;
+  display: inline;
+}
+
+.background-dark-red {
+  background-color: #990000;
+}
+
+.background-dark-gray {
+  background-color: #2E2F30;
+}
+
+.website-header {
+  font: 100px 'Yellowtail';
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.background-dark-gray,
+.background-dark-red,
+.light-text {
+  color: #c8c8c8;
+  text-shadow: 1px 1px #202020;
+}
+
+.website-header,
+.dark-text {
+  color: #202020;
+  text-shadow: 1px 1px #c8c8c8;
+}
