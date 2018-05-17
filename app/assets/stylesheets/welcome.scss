@@ -57,8 +57,6 @@ $dark: 10%;
   color: darken($off-white, $partial-dark);
 }
 
-
-
 .background-dark-red {
   background-color: $dark-red;
 }
@@ -77,6 +75,7 @@ $dark: 10%;
 .background-dark-red,
 .light-text {
   color: $off-white;
+  text-decoration: none;
   text-shadow: 1px 1px $off-black;
 }
 
