@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.0'
 gem 'bcrypt', '~> 3.1.12'
 # Use NOBSPW for password requirements
 gem 'nobspw'
-# Use sqlite3 as the database for Active Record
+# Use sqlite3 (the one from github that works) as the database for Active Record
 gem 'sqlite3', :git => 'https://github.com/sparklemotion/sqlite3-ruby'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
