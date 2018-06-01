@@ -29,6 +29,7 @@ class User < ApplicationRecord
     (?=.{2,})               # Must contain 2 or more characters
     (?=.*(\S))              # Must contain a non-whitespace character
     (?!.*(\?|&|\\|\/|<|>))  # Must not contain ?, &, \\, \/, <, or >
+    .*                      # Matches everything (above lines cover validity)
   /x # x means ignore whitespace in Regex creation, not actual formatting
   validates :name, presence: true, length: { maximum: 50 },
             uniqueness: { case_sensitive: false },
