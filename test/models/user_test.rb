@@ -104,8 +104,15 @@ class UserTest < ActiveSupport::TestCase
 
   test 'password with script is not valid' do
     invalid_user = User.create(name: 'Nick', email: 'nick@usr.com',
-                            is_admin: false, password: "*Test123<script>alert();</script>",
-                            password_confirmation: "*Test123<script>alert();</script>")
+                               is_admin: false, password: "*Test123<script>alert();</script>",
+                               password_confirmation: "*Test123<script>alert();</script>")
+    assert invalid_user.invalid?
+  end
+
+  test 'name is not new' do
+    invalid_user = User.create(name: 'New', email: 'new@usr.com',
+                               is_admin: false, password: @valid_password,
+                               password_confirmation: @valid_password)
     assert invalid_user.invalid?
   end
 
