@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'signin' => 'signin#signin', :as => :signin_signin
   root 'welcome#index'
+  get '/signin', to: 'sessions#new'
+  post '/signin', to: 'sessions#create'
+  delete '/signout', to: 'sessions#destroy'
+  get '/register', to: 'users#new'
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
