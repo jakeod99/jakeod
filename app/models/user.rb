@@ -24,10 +24,9 @@ class User < ApplicationRecord
   validates :password, presence: true,
             format: { with: PASSWORD_VALIDATION_REGEX }
 
-
   # name validation
-  validates :name, presence: true, length: { maximum: 50 }
-
+  validates :name, presence: true, length: { maximum: 50 },
+            uniqueness: { case_sensitive: false }
 
   #is_admin does not need validation, boolean value constrained to T/F
 
