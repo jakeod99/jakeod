@@ -3,10 +3,15 @@
     <div class="website-header">
       Jake O'Donnell
     </div>
-    <nav class="horizontal-bar background-dark-red">
-      <div class="bar-option">Home</div>
+    <nav class="horizontal-bar background-dark-red" style="height: 76px"> <!-- below order indicates priority-->
+      <%= link_to "Home", root_path, class:"background-dark-red bar-option" %>
+      <%= link_to "Sign In", signin_path, class:"background-dark-red bar-option", style:"float: right" %>
+      <div class="bar-divider" style="float: right"></div>
+      <div class="bar-divider"></div>
       <div class="bar-option">Menu</div>
+      <div class="bar-divider"></div>
       <div class="bar-option">Other</div>
+      <div class="bar-divider"></div>
     </nav>
   </body>
 </html>
