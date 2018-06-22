@@ -1,8 +1,6 @@
 <html>
   <body class="background-dark-gray">
-    <div class="website-header">
-      Jake O'Donnell
-    </div>
+    <%=image_tag(asset_path('jakeod_logo.png'))%>
     <nav class="horizontal-bar background-dark-red" style="height: 76px"> <!-- below order indicates priority-->
       <%= link_to "Home", root_path, class:"background-dark-red bar-option" %>
       <%= link_to "Sign In", signin_path, class:"background-dark-red bar-option", style:"float: right" %>

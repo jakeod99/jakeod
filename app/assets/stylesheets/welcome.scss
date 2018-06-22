@@ -2,8 +2,10 @@
 
 $dark-red: #990000;
 $dark-gray: #2E2F30;
-$off-white: #c8c8c8;
+$off-white: #e8e8e8;
 $off-black: #202020;
+$light-blue: #4bb6e3;
+$gray: #9a9a9a;
 
 $partial-dark: 5%;
 $dark: 10%;
@@ -65,11 +67,11 @@ $dark: 10%;
   background-color: $dark-gray;
 }
 
-.website-header {
-  font: 100px 'Yellowtail';
-  text-align: center;
-  padding-bottom: 20px;
-}
+//.website-header {
+//  font: 100px 'Yellowtail';
+//  text-align: center;
+//  padding-bottom: 20px;
+//}
 
 .background-dark-gray,
 .background-dark-red,
