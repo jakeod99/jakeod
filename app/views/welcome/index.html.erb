@@ -1,15 +1,17 @@
 <html>
-  <body class="background-dark-gray">
-    <%=image_tag(asset_path('jakeod_logo.png'))%>
-    <nav class="horizontal-bar background-dark-red" style="height: 76px"> <!-- below order indicates priority-->
-      <%= link_to "Home", root_path, class:"background-dark-red bar-option" %>
-      <%= link_to "Sign In", signin_path, class:"background-dark-red bar-option", style:"float: right" %>
-      <div class="bar-divider" style="float: right"></div>
-      <div class="bar-divider"></div>
-      <div class="bar-option">Menu</div>
-      <div class="bar-divider"></div>
-      <div class="bar-option">Other</div>
-      <div class="bar-divider"></div>
-    </nav>
+  <body class="background-white">
+    <div class="banner">
+      <%=image_tag(asset_path('logo.png'), :class => "logo")%>
+      <nav id="main-bar" class="horizontal-bar background-light-blue"> <!-- below order = priority-->
+        <%= link_to "Home", root_path, class:"background-light-blue bar-option" %>
+        <%= link_to "Sign In", signin_path, class:"background-light-blue bar-option", style:"float: right" %>
+        <div class="bar-divider" style="float: right"></div>
+        <div class="bar-divider"></div>
+        <div class="bar-option">Menu</div>
+        <div class="bar-divider"></div>
+        <div class="bar-option">Other</div>
+        <div class="bar-divider"></div>
+      </nav>
+    </div>
   </body>
 </html>

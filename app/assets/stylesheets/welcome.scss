@@ -1,14 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Yellowtail);
 
-$dark-red: #990000;
-$dark-gray: #2E2F30;
-$off-white: #e8e8e8;
-$off-black: #202020;
-$light-blue: #4bb6e3;
-$gray: #9a9a9a;
+$light-blue: #58B2DE;
+$gray: #ACACAC;
+$white: #FFFFFF;
+$black: #000000;
 
-$partial-dark: 5%;
-$dark: 10%;
+$partial-darkness-change: 5%;
+$darkness-change: 10%;
 
 .horizontal-bar {
   overflow: hidden;
@@ -23,6 +21,10 @@ $dark: 10%;
   border-radius: 10px;
 }
 
+#main-bar {
+  height: 76px;
+}
+
 .bar-divider {
   width: 5px;
   height: 56px;
@@ -30,14 +32,14 @@ $dark: 10%;
   float: left;
 }
 
-.background-dark-red > .bar-divider,
-.background-dark-red.bar-divider {
-  background-color: darken($dark-red, $dark);
+.background-white > .bar-divider,
+.background-white.bar-divider {
+  background-color: darken($white, $darkness-change);
 }
 
-.background-dark-gray > .bar-option,
-.background-dark-gray.bar-option {
-  background-color: darken($dark-gray, $dark);
+.background-light-blue > .bar-divider,
+.background-light-blue.bar-divider {
+  background-color: darken($light-blue, $darkness-change);
 }
 
 .bar-option {
@@ -47,42 +49,33 @@ $dark: 10%;
   float: left;
 }
 
-.background-dark-red > .bar-option:hover,
-.background-dark-red.bar-option:hover {
-  background-color: darken($dark-red, $partial-dark);
-  color: darken($off-white, $partial-dark);
+.background-white > .bar-option:hover,
+.background-white.bar-option:hover {
+  background-color: darken($white, $partial-darkness-change);
+  color: lighten($black, $partial-darkness-change);
 }
 
-.background-dark-gray > .bar-option:hover,
-.background-dark-gray.bar-option:hover {
-  background-color: darken($dark-gray, $partial-dark);
-  color: darken($off-white, $partial-dark);
+.background-light-blue > .bar-option:hover,
+.background-light-blue.bar-option:hover {
+  background-color: darken($light-blue, $partial-darkness-change);
+  color: lighten($black, $partial-darkness-change);
 }
 
-.background-dark-red {
-  background-color: $dark-red;
+.background-white {
+   background-color: $white;
+ }
+
+.background-light-blue {
+  background-color: $light-blue;
 }
 
-.background-dark-gray {
-  background-color: $dark-gray;
+.banner {
+  width: 100%;
+  padding-bottom: 20pt;
 }
 
-//.website-header {
-//  font: 100px 'Yellowtail';
-//  text-align: center;
-//  padding-bottom: 20px;
-//}
-
-.background-dark-gray,
-.background-dark-red,
-.light-text {
-  color: $off-white;
-  text-decoration: none;
-  text-shadow: 1px 1px $off-black;
-}
-
-.website-header,
-.dark-text {
-  color: $off-black;
-  text-shadow: 1px 1px $off-white;
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
