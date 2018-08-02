@@ -1,23 +1,20 @@
 <html>
-  <body class="background-dark-gray">
-  <div class="website-header">
-    Jake O'Donnell
-  </div>
-  <nav class="horizontal-bar background-dark-red" style="height: 76px"> <!-- order indicates priority-->
-    <%= link_to "Home", root_path, class:"background-dark-red bar-option" %>
-    <%= link_to "Sign In", signin_path, class:"background-dark-red bar-option", style:"float: right" %>
-    <div class="bar-divider" style="float: right"></div>
-    <div class="bar-divider"></div>
-    <div class="bar-option">Menu</div>
-    <div class="bar-divider"></div>
-    <div class="bar-option">Other</div>
-    <div class="bar-divider"></div>
-  </nav>
-  <% @users.each do |user| %>
-    <div class="user-info round-corners">
-      <%= user.name %>
-      </br>
+  <body class="background-white">
+    <div class="banner">
+      <div class="logo">
+        <%= link_to image_tag(asset_path('logo.png')), root_path %>
+      </div>
+      <nav id="main-bar" class="horizontal-bar background-light-blue"> <!-- below order = priority-->
+        <%= link_to "Sign In", signin_path, class:"background-light-blue bar-option", id: "sign-in-button" %>
+        <div class="bar-option">Menu</div>
+        <div class="bar-option">Other</div>
+      </nav>
     </div>
-  <% end %>
+    <% @users.each do |user| %>
+        <div class="user-info round-corners">
+        <%= user.name %>
+      </br>
+      </div>
+    <% end %>
   </body>
 </html>

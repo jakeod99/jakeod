@@ -1,23 +1,35 @@
 <html>
-  <h1>Register</h1>
-  <%= form_for(@user) do |f| %>
-    <%= f.label :name, 'Username' %>
-    <%= f.text_field :name %>
-    </br>
-    </br>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    </br>
-    </br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    </br>
-    </br>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-    </br>
-    </br>
-    </br>
-    <%= f.submit "Register" %>
-  <% end %>
+  <body class="background-white">
+    <div class="banner">
+      <div class="logo">
+        <%= link_to image_tag(asset_path('logo.png')), root_path %>
+      </div>
+      <nav id="main-bar" class="horizontal-bar background-light-blue"> <!-- below order = priority-->
+        <%= link_to "Sign In", signin_path, class:"background-light-blue bar-option", id: "sign-in-button" %>
+        <div class="bar-option">Menu</div>
+        <div class="bar-option">Other</div>
+      </nav>
+    </div>
+    <h1>Register</h1>
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name, 'Username' %>
+      <%= f.text_field :name %>
+      </br>
+      </br>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      </br>
+      </br>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      </br>
+      </br>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+      </br>
+      </br>
+      </br>
+      <%= f.submit "Register" %>
+    <% end %>
+  </body>
 </html>
