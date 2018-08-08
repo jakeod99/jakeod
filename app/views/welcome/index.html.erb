@@ -1,16 +1,5 @@
 <html>
   <body class="background-white">
-    <div class="banner">
-      <div class="logo">
-        <%= link_to image_tag(asset_path('logo.png'), id: "logo"), root_path %>
-      </div>
-      <nav id="main-bar" class="horizontal-bar background-light-blue"> <!-- below order = priority-->
-        <%= link_to "Sign In", signin_path, class:"background-light-blue bar-option", id: "sign-in-button" %>
-        <div class="bar-option">Projects</div>
-        <div class="bar-option">Employment</div>
-        <div class="bar-option">Résumé</div>
-        <div class="bar-option">Missions</div>
-      </nav>
-    </div>
+    <div class="main-banner"></div>
   </body>
 </html>

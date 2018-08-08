@@ -1,0 +1,34 @@
+(function($) {
+
+  const logoPath = "<%= asset_path('logo.png') %>";
+
+  window.render = {
+
+    renderAll: function () {
+      window.render.banner();
+    },
+
+    banner: function() {
+      $('.main-banner').html(
+          `<div class='logo'>
+            <a href='/'>
+              <img id='logo' src='${logoPath}' />
+            </a>
+          </div>
+          <nav id='main-bar' class='horizontal-bar background-light-blue'> <!-- below order = priority-->
+            <a class="background-light-blue bar-option" id="sign-in-button" href='/signin'>Sign In</a>
+            <div class='bar-option'>Projects</div>
+            <div class='bar-option'>Employment</div>
+            <div class='bar-option'>Résumé</div>
+            <div class='bar-option'>Missions</div>
+          </nav>`
+      );
+    }
+
+  };
+
+})(jQuery);
+
+jQuery(window.render.renderAll);
+
+$(document).on('turbolinks:load', window.render.renderAll);

@@ -1,19 +1,7 @@
 <html>
   <body class="background-white">
-    <div class="banner">
-      <div class="logo">
-        <%= link_to image_tag(asset_path('logo.png')), root_path %>
-      </div>
-      <nav id="main-bar" class="horizontal-bar background-light-blue"> <!-- below order = priority-->
-        <%= link_to "Sign In", signin_path, class:"background-light-blue bar-option", id: "sign-in-button" %>
-        <div class="bar-option">Projects</div>
-        <div class="bar-option">Employment</div>
-        <div class="bar-option">Résumé</div>
-        <div class="bar-option">Missions</div>
-      </nav>
-    </div>
+    <div class="main-banner"></div>
     <h1>Sign in</h1>
-
     <%= form_for(:session, url: signin_path) do |f| %>
       <%= f.label :name, 'Username' %>
       <%= f.text_field :name %>
@@ -25,8 +13,6 @@
       </br>
       <%= f.submit "Log in" %>
     <% end %>
-
     <p>New user? <%= link_to "Register now!", register_path %></p>
-
   </body>
 </html>
