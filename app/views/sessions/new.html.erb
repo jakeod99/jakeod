@@ -1,19 +1,18 @@
 <html>
-
-  <h1>Sign in</h1>
-
-  <%= form_for(:session, url: signin_path) do |f| %>
-    <%= f.label :name, 'Username' %>
-    <%= f.text_field :name %>
-    </br>
-    </br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    </br>
-    </br>
-    <%= f.submit "Log in" %>
-  <% end %>
-
-  <p>New user? <%= link_to "Register now!", register_path %></p>
-
+  <body class="background-white">
+    <div class="main-banner"></div>
+    <h1>Sign in</h1>
+    <%= form_for(:session, url: signin_path) do |f| %>
+      <%= f.label :name, 'Username' %>
+      <%= f.text_field :name %>
+      </br>
+      </br>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      </br>
+      </br>
+      <%= f.submit "Log in" %>
+    <% end %>
+    <p>New user? <%= link_to "Register now!", register_path %></p>
+  </body>
 </html>

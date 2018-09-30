@@ -1,12 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Yellowtail);
+$light-blue: #58B2DE;
+$gray: #ACACAC;
+$white: #FFFFFF;
+$black: #000000;
 
-$dark-red: #990000;
-$dark-gray: #2E2F30;
-$off-white: #c8c8c8;
-$off-black: #202020;
+$darkness-change-partial: 7.5%;
+$darkness-change: 15%;
 
-$partial-dark: 5%;
-$dark: 10%;
+body {
+  display: block;
+  margin: 0;
+}
 
 .horizontal-bar {
   overflow: hidden;
@@ -16,71 +19,58 @@ $dark: 10%;
   position: relative;
 }
 
-.horizontal-bar,
 .round-corners {
-  border-radius: 10px;
+  border-radius: 10pt;
 }
 
-.bar-divider {
-  width: 5px;
-  height: 56px;
-  padding: 10px 0px;
-  float: left;
+#main-bar {
+  height: 36pt;
 }
 
-.background-dark-red > .bar-divider,
-.background-dark-red.bar-divider {
-  background-color: darken($dark-red, $dark);
-}
-
-.background-dark-gray > .bar-option,
-.background-dark-gray.bar-option {
-  background-color: darken($dark-gray, $dark);
+#sign-in-button {
+  float: right
 }
 
 .bar-option {
-  font-size: 40px;
+  font-size: 20pt;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 15px;
+  padding: 7pt 12pt;
   float: left;
-}
-
-.background-dark-red > .bar-option:hover,
-.background-dark-red.bar-option:hover {
-  background-color: darken($dark-red, $partial-dark);
-  color: darken($off-white, $partial-dark);
-}
-
-.background-dark-gray > .bar-option:hover,
-.background-dark-gray.bar-option:hover {
-  background-color: darken($dark-gray, $partial-dark);
-  color: darken($off-white, $partial-dark);
-}
-
-.background-dark-red {
-  background-color: $dark-red;
-}
-
-.background-dark-gray {
-  background-color: $dark-gray;
-}
-
-.website-header {
-  font: 100px 'Yellowtail';
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.background-dark-gray,
-.background-dark-red,
-.light-text {
-  color: $off-white;
+  cursor: pointer;
   text-decoration: none;
-  text-shadow: 1px 1px $off-black;
 }
 
-.website-header,
-.dark-text {
-  color: $off-black;
-  text-shadow: 1px 1px $off-white;
+.background-light-blue > .bar-option:hover,
+.background-light-blue.bar-option:hover {
+  background-color: darken($light-blue, $darkness-change-partial);
+}
+
+.background-light-blue > .bar-option:active,
+.background-light-blue.bar-option:active {
+  background-color: darken($light-blue, $darkness-change);
+}
+
+.background-white {
+   background-color: $white;
+   color: $black;
+ }
+
+.background-light-blue {
+  background-color: $light-blue;
+  color: $white;
+}
+
+.banner {
+  width: 100%;
+  padding-bottom: 20pt;
+  padding-top: 5pt;
+}
+
+.logo {
+  display: table;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 150pt;
 }
