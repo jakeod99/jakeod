@@ -1,0 +1,17 @@
+// Place all the styles related to the Error controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#construction-svg {
+  transform: scale(1.5) translate(0, 30%);
+}
+
+.construction-container {
+  margin-bottom: 70pt !important;
+}
+
+.error-text {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10pt;
+  text-align: center;
+  text-decoration: none;
+}

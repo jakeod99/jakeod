@@ -10,17 +10,16 @@
 
     banner: function() {
       $('.main-banner').html(
-          `<div class='logo'>
+          `<div class='center'>
             <a href='/'>
               <img id='logo' src='${logoPath}' />
             </a>
           </div>
           <nav id='main-bar' class='horizontal-bar background-light-blue'> <!-- below order = priority-->
-            <a class="background-light-blue bar-option" id="sign-in-button" href='/signin'>Sign In</a>
             <div class='bar-option'>Projects</div>
             <div class='bar-option'>Employment</div>
             <div class='bar-option'>Résumé</div>
-            <div class='bar-option'>Missions</div>
+            <a class="background-light-blue bar-option" id="sign-in-button" href='/signin'>Sign In</a>
           </nav>`
       );
     }
