@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'content/projects'
+  get 'content/employment'
+  get 'content/resume'
   root 'welcome#index'
 
   # uncomment to resume work on user sessions
